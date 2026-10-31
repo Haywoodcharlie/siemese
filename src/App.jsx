@@ -107,7 +107,7 @@ export default function App() {
             <div>
               <div className="text-2xl font-black tracking-wider">SIAMESE</div>
               <div className="hidden rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-300 sm:inline-block">
-                Seed Pitch & Dashboard
+                Founded by Jeremy Michael Shaw • Founder & CEO
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function App() {
               <div className="max-w-3xl space-y-6">
                 <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-300">
                   <Sparkles className="h-3.5 w-3.5" />
-                  Seed Stage Investment Proposal
+                  Founded by Jeremy Michael Shaw • Founder & CEO
                 </div>
                 <h1 className="text-4xl font-black leading-tight text-white sm:text-6xl">
                   The <span className="bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent">$19.6B</span> opportunity nobody sees
@@ -192,6 +192,44 @@ export default function App() {
               <StatCard icon={Award} title="Target ROI" value="43.5x" sub="Scenario return multiple" accent="text-emerald-300" />
             </section>
 
+            <section className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="rounded-3xl border border-slate-700 bg-[#12181F] p-8">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="rounded-xl bg-emerald-500/10 p-2 text-emerald-400">
+                    <Briefcase className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Leadership</h3>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-3xl font-black text-white">Jeremy Michael Shaw</div>
+                    <div className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300">Founder & CEO</div>
+                  </div>
+                  <p className="text-sm leading-relaxed text-slate-300">
+                    Jeremy Michael Shaw leads SIAMESE with a clear mission: build the premium AI operating system for executive focus, resilience, and decision quality.
+                  </p>
+                  <p className="text-sm leading-relaxed text-slate-300">
+                    Under his leadership, SIAMESE brings together wellness intelligence, productivity automation, and premium subscription value into a single executive-first platform.
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-slate-700 bg-gradient-to-br from-[#12181F] to-[#0D131A] p-8">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="rounded-xl bg-emerald-500/10 p-2 text-emerald-400">
+                    <Target className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Founder vision</h3>
+                </div>
+                <p className="text-sm leading-relaxed text-slate-300">
+                  Build a company that helps high-performing leaders operate with more clarity, less friction, and more sustainable peak performance.
+                </p>
+                <div className="mt-6 rounded-2xl border border-slate-700 bg-[#0D131A] p-4 text-sm text-slate-200">
+                  “The future of executive performance is not more noise — it is better decisions, healthier rhythms, and smarter leverage.”
+                </div>
+              </div>
+            </section>
+
             <section className="grid gap-8 lg:grid-cols-2">
               <div className="rounded-3xl border border-slate-700 bg-[#12181F] p-8">
                 <div className="mb-6 flex items-center gap-3">
@@ -201,7 +239,7 @@ export default function App() {
                   <h3 className="text-xl font-bold text-white">The investment thesis</h3>
                 </div>
                 <p className="text-sm leading-relaxed text-slate-300">
-                  High-earning executives are overworked and under-supported. Most wellness products focus on meditation and general productivity, while the true pain point is decision quality, cognitive resilience, and premium executive execution. SIAMESE addresses that gap directly.
+                  High-earning executives are overworked and under-supported. Most wellness products focus on meditation and general productivity, while the true pain point is decision quality, cognitive capacity, and time leverage in high-pressure roles.
                 </p>
                 <div className="mt-6 space-y-3 rounded-2xl border border-slate-700 bg-[#0D131A] p-4">
                   <div className="flex items-start gap-3">
@@ -706,6 +744,12 @@ export default function App() {
         )}
       </main>
 
+      <footer className="border-t border-slate-700 bg-[#0D131A] py-6">
+        <div className="mx-auto max-w-7xl px-4 text-center text-xs text-slate-400 sm:px-6 lg:px-8">
+          Founded and led by <span className="font-bold text-emerald-300">Jeremy Michael Shaw</span>, Founder & CEO of SIAMESE.
+        </div>
+      </footer>
+
       {showTermSheetModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
           <div className="w-full max-w-lg rounded-3xl border border-slate-700 bg-[#12181F] p-6 shadow-2xl">
@@ -721,22 +765,22 @@ export default function App() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="space-y-2 text-xs text-slate-300">
                   <span>Name</span>
-                  <input value={contactForm.name} onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2 text-white outline-none focus:border-emerald-400" placeholder="Jane Investor" />
+                  <input value={contactForm.name} onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2.5 text-white outline-none focus:border-emerald-400" placeholder="Your name" />
                 </label>
                 <label className="space-y-2 text-xs text-slate-300">
                   <span>Email</span>
-                  <input type="email" value={contactForm.email} onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2 text-white outline-none focus:border-emerald-400" placeholder="jane@fund.com" />
+                  <input type="email" value={contactForm.email} onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2.5 text-white outline-none focus:border-emerald-400" placeholder="name@company.com" />
                 </label>
               </div>
 
               <label className="block space-y-2 text-xs text-slate-300">
                 <span>Fund / firm</span>
-                <input value={contactForm.fund} onChange={(e) => setContactForm({ ...contactForm, fund: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2 text-white outline-none focus:border-emerald-400" placeholder="Northstar Ventures" />
+                <input value={contactForm.fund} onChange={(e) => setContactForm({ ...contactForm, fund: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2.5 text-white outline-none focus:border-emerald-400" placeholder="Fund or firm name" />
               </label>
 
               <label className="block space-y-2 text-xs text-slate-300">
                 <span>Check size</span>
-                <select value={contactForm.checkSize} onChange={(e) => setContactForm({ ...contactForm, checkSize: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2 text-white outline-none focus:border-emerald-400">
+                <select value={contactForm.checkSize} onChange={(e) => setContactForm({ ...contactForm, checkSize: e.target.value })} className="w-full rounded-xl border border-slate-700 bg-[#0D131A] px-3 py-2.5 text-white outline-none focus:border-emerald-400">
                   <option>$100K+</option>
                   <option>$250K+</option>
                   <option>$500K+</option>
